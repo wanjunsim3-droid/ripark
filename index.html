@@ -1,0 +1,652 @@
+
+
+
+
+
+
+
+     <!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>마곡 아이파크 디어반</title>
+    <!-- SEO meta tag -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="date" content="">
+    <meta name="sitecode" content="">
+    <!-- // SEO meta tag -->
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://www.i-park.com/magoktheurban">
+    <meta property="og:image" content="https://cdn.i-park.com/ipark/gajaewool/images/og_img_kakao_ver.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="마곡 아이파크 디어반">
+    <meta property="og:title" content="마곡 아이파크 디어반">
+    <meta property="og:description" content="기업의 미래가 될 핵심 비전도시에 아이파크가 만드는 가장 트렌디한 워크플랫폼, 마곡지구 첫 번째 지식산업센터">
+    <!-- // Open Graph -->
+
+    <!-- Icon & Favicon -->
+    <link rel="shortcut icon" href="https://cdn.i-park.com/ipark/common/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.i-park.com/ipark/common/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.i-park.com/ipark/common/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="https://cdn.i-park.com/ipark/common/favicon-16x16.png">
+    <!-- // Icon & Favicon -->
+
+    <link rel="stylesheet" href="https://www.i-park.com/resources/house/magoktheurban/css/libs.css">
+    <link rel="stylesheet" href="https://www.i-park.com/resources/house/magoktheurban/css/ipark-template.css">
+  
+    <style>
+        /* Event Popup */
+        .event-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(5px); z-index: 3000; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+        .event-popup.active { opacity: 1; pointer-events: all; }
+        .popup-content { width: 90%; max-width: 400px; background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.3); position: relative; transform: translateY(20px); transition: transform 0.3s; }
+        .event-popup.active .popup-content { transform: translateY(0); }
+        .close-popup { position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.1); border: none; color: #333; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: background 0.3s; z-index: 10; }
+        .close-popup:hover { background: rgba(0,0,0,0.2); }
+        .popup-header { background: #d1122a; color: white; padding: 20px; text-align: center; }
+        .popup-header h2 { margin: 0; font-size: 24px; font-weight: 800; }
+        .popup-body { padding: 30px 20px; text-align: center; }
+        .popup-body h3 { font-size: 22px; color: #1a2233; margin-bottom: 15px; font-weight: 700; word-break: keep-all; }
+        .popup-body p { color: #555; margin-bottom: 20px; font-size: 15px; word-break: keep-all; line-height: 1.4; }
+        .popup-btn { display: inline-block; background: #1a2233; color: white; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 16px; transition: background 0.3s; }
+        .popup-btn:hover { background: #0f172a; }
+        .popup-footer { background: #f1f5f9; padding: 12px 20px; display: flex; justify-content: flex-end; align-items: center; font-size: 14px; color: #555; border-top: 1px solid #e2e8f0; }
+        .popup-footer label { display: flex; align-items: center; cursor: pointer; }
+        .popup-footer input { margin-right: 5px; cursor: pointer; display: inline-block !important; appearance: auto !important; opacity: 1 !important; position: static !important; z-index: 10 !important; visibility: visible !important; width: 16px !important; height: 16px !important; }
+    </style>
+    
+  
+    <style>
+        /* Telegram Form Modal */
+        .tg-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(5px); z-index: 4000; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+        .tg-modal.active { opacity: 1; pointer-events: all; }
+        .tg-content { width: 90%; max-width: 450px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.3); position: relative; transform: translateY(20px); transition: transform 0.3s; }
+        .tg-modal.active .tg-content { transform: translateY(0); }
+        .tg-header { background: #1a2233; color: white; padding: 20px; text-align: center; position: relative; }
+        .tg-header h2 { margin: 0; font-size: 22px; font-weight: 700; }
+        .tg-close { position: absolute; top: 18px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+        .tg-body { padding: 30px; }
+        .tg-form-group { margin-bottom: 20px; text-align: left; }
+        .tg-form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #333; }
+        .tg-form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 15px; box-sizing: border-box; }
+        .tg-form-group input:focus { border-color: #1a2233; outline: none; }
+        .tg-consent { margin-bottom: 25px; font-size: 13px; color: #666; line-height: 1.5; background: #f9f9f9; padding: 15px; border-radius: 6px; border: 1px solid #eee; height: 100px; overflow-y: auto; text-align: left; }
+        .tg-checkbox-wrap { margin-bottom: 20px; text-align: left; display: flex; align-items: center; font-size: 14px; font-weight: 600; color: #333; cursor: pointer; }
+        .tg-checkbox-wrap input { margin-right: 8px; width: 18px !important; height: 18px !important; cursor: pointer; display: inline-block !important; appearance: auto !important; opacity: 1 !important; position: static !important; z-index: 10 !important; visibility: visible !important; }
+        .tg-submit { width: 100%; padding: 15px; background: #d1122a; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+        .tg-submit:hover { background: #b00d20; }
+        .tg-submit:disabled { background: #ccc; cursor: not-allowed; }
+    </style>
+    
+</head>
+
+  <body>
+    <!-- Skip Navigation -->
+    <ul class="skip">
+      <li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">Skip to navigation</a></li>
+      <li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">Skip to content</a></li>
+    </ul>
+    <!-- // Skip Navigation -->
+
+    <div class="wrap">
+      <!-- Header -->
+      <header class="header">
+        <!-- PC Header -->
+        <div class="header_inner type_pc">
+          <h1 class="header_title">
+            <a href="https://www.i-park.com/magoktheurban" class="header_title_link">
+              <span class="blind">마곡 아이파크 디어반</span>
+            </a>
+          </h1>
+          <nav class="header_gnb">
+            <ul class="header_gnb_list">
+              <li class="header_gnb_item">
+                <a href="https://www.i-park.com/magoktheurban/overview" class="header_gnb_link">분양정보</a>
+                <div class="header_lnb">
+                  <ul class="header_lnb_list">
+                    <li class="header_lnb_item">
+                      <a href="https://www.i-park.com/magoktheurban/overview" class="header_lnb_link">사업개요</a>
+                    </li>
+                    <li class="header_lnb_item">
+                      <a href="https://www.i-park.com/magoktheurban/youtube" class="header_lnb_link">유튜브영상</a>
+                    </li>
+                    <li class="header_lnb_item">
+                      <a href="https://www.i-park.com/magoktheurban/notice_list?buildingSeq=14431" class="header_lnb_link">보도자료</a>
+                    </li>
+                    <li class="header_lnb_item">
+                      <a href="https://www.i-park.com/magoktheurban/modelhouse" class="header_lnb_link">오시는 길</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header_gnb_item">
+                <a href="https://www.i-park.com/magoktheurban/environment" class="header_gnb_link">상품특징</a>
+                <div class="header_lnb">
+                  <ul class="header_lnb_list">
+                    <li class="header_lnb_item">
+                      <a href="https://www.i-park.com/magoktheurban/environment" class="header_lnb_link">입지환경</a>
+                    </li>
+                    <li class="header_lnb_item">
+                      <a href="https://www.i-park.com/magoktheurban/design" class="header_lnb_link">단지설계</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="header_gnb_item">
+                <a href="https://www.i-park.com/magoktheurban/floor" class="header_gnb_link">단지정보</a>
+                <div class="header_lnb">
+                  <ul class="header_lnb_list">
+                    <li class="header_lnb_item">
+                      <a href="https://www.i-park.com/magoktheurban/floor" class="header_lnb_link">층별 평면도 · 호실표</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="header_util">
+            <span class="header_telephone">
+              <span class="blind">전화번호</span>
+              1666-5984
+            </span>
+            <a href="#" onclick="openTelegramModal(event)" class="header_interest_btn">관심고객등록</a>
+          </div>
+        </div>
+
+        <!-- Mobile Header -->
+        <div class="header_inner type_mobile">
+          <h1 class="header_title">
+            <a href="https://www.i-park.com/magoktheurban" class="header_title_link">
+              <span class="blind">마곡 아이파크 디어반</span>
+            </a>
+          </h1>
+          <button type="button" class="header_menu_btn" aria-haspopup="true" aria-controls="gnb_menu_wrap" aria-expanded="false"><span class="blind">메뉴</span></button>
+          <div id="gnb_menu_wrap" class="header_gnb_wrap">
+            <div class="header_gnb_area">
+              <nav class="header_gnb">
+                <ul class="header_gnb_list">
+                  <li class="header_gnb_item">
+                    <button type="button" class="header_gnb_btn" aria-expanded="false" aria-controls="lnb_menu1">분양정보</button>
+                    <div id="lnb_menu1" class="header_lnb">
+                      <ul class="header_lnb_list">
+                        <li class="header_lnb_item">
+                          <a href="https://www.i-park.com/magoktheurban/overview" class="header_lnb_link">사업개요</a>
+                        </li>
+                        <li class="header_lnb_item">
+                          <a href="https://www.i-park.com/magoktheurban/youtube" class="header_lnb_link">유튜브 영상</a>
+                        </li>
+                        <li class="header_lnb_item">
+                          <a href="https://www.i-park.com/magoktheurban/notice_list?buildingSeq=14431" class="header_lnb_link">보도자료</a>
+                        </li>
+                        <li class="header_lnb_item">
+                          <a href="https://www.i-park.com/magoktheurban/modelhouse" class="header_lnb_link">오시는 길</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="header_gnb_item">
+                    <button type="button" class="header_gnb_btn" aria-expanded="false" aria-controls="lnb_menu2">상품특징</button>
+                    <div id="lnb_menu2" class="header_lnb">
+                      <ul class="header_lnb_list">
+                        <li class="header_lnb_item">
+                          <a href="https://www.i-park.com/magoktheurban/environment" class="header_lnb_link">입지환경</a>
+                        </li>
+                        <li class="header_lnb_item">
+                          <a href="https://www.i-park.com/magoktheurban/design" class="header_lnb_link">단지설계</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="header_gnb_item">
+                    <button type="button" class="header_gnb_btn" aria-expanded="false" aria-controls="lnb_menu3">단지정보</button>
+                    <div id="lnb_menu3" class="header_lnb">
+                      <ul class="header_lnb_list">
+                        <li class="header_lnb_item">
+                          <a href="https://www.i-park.com/magoktheurban/floor" class="header_lnb_link">층별 평면도 · 호실표</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <div class="header_gnb_util">
+                <button type="button" class="header_close_btn">
+                  <span class="blind">메뉴 닫기</span>
+                </button>
+                <a href="#" onclick="openTelegramModal(event)" class="header_interest_btn">관심고객등록</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- // Header -->
+
+
+    <!-- Contents -->
+    <main id="content" class="container page_main">
+      <section class="section section_hero_banner">
+        <div class="section_inner">
+
+          <div class="hero_banner swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="hero_banner_imgbox">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/KV_01.jpg" alt="" class="hero_banner_img media_pc">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/KV_01_mobile.jpg" alt="" class="hero_banner_img media_tablet">
+                </div>
+                <div class="hero_banner_txtbox type_english">
+                  <span class="hero_banner_txt">work<br>platform<br>ipark.</span>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="hero_banner_imgbox">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/KV_02.jpg" alt="" class="hero_banner_img media_pc">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/KV_02_mobile.jpg" alt="" class="hero_banner_img media_tablet">
+                </div>
+                <div class="hero_banner_txtbox">
+                  <span class="hero_banner_txt">비즈니스<br>프리미엄의<br>중심을 누리다</span>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-controls">
+              <div class="swiper-pagination-wrapper">
+                <span class="blind">현재 배너 번호</span>
+                <span class="swiper-pagination-current"></span>
+                <div class="swiper-pagination"></div>
+                <span class="blind">전체 배너 수</span>
+                <span class="swiper-pagination-total"></span>
+              </div>
+              <button type="button" class="hero_autoplay_btn">
+                <span class="blind">
+                  <span class="sr_off">배너 자동재생 시작하기</span>
+                  <span class="sr_on">배너 자동재생 멈추기</span>
+                </span>
+              </button>
+            </div>
+            <div class="swiper-button-prev">
+              <span class="blind">이전 배너 보기</span>
+            </div>
+            <div class="swiper-button-next">
+              <span class="blind">다음 배너 보기</span>
+            </div>
+          </div>
+          <a href="tel:1666-5984" class="main_telephone">
+            <span class="blind">1666-5984 전화하기</span>
+          </a>
+        </div>
+      </section>
+      <section class="section section_bird">
+        <div class="section_inner">
+          <h2 class="section_tit">MAGOK IPARK THE URBAN<br>bird's-eye view</h2>
+          <div class="bird_imgbox">
+            <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/bird_01_v2.jpg" alt="" class="media_pc">
+            <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/bird_01_mobile_v2.jpg" alt="" class="media_tablet">
+          </div>
+        </div>
+      </section>
+      <section class="section section_view">
+        <div class="section_inner">
+          <h2 class="section_tit">MAGOK IPARK THE URBAN<br>premium</h2>
+
+          <div class="view type_main">
+            <ul class="view_list">
+              <li class="view_item horizon">
+                <div class="view_imgbox">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/view_01.jpg" alt="" class="media_pc">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/view_01_mobile.jpg" alt="" class="media_tablet">
+                </div>
+                <div class="view_info">
+                  <strong class="info_tit">서울 산업단지 중 유일한 R&amp;D단지, <br class="media_pc">마곡의 핵심위치</strong>
+                  <p class="info_desc">서부 광역철도(계획),  김포공항 복합개발(계획),<br>광명~서울고속도로(계획)</p>
+                </div>
+              </li>
+              <li class="view_item vertical">
+                <div class="view_imgbox">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/view_02.jpg" alt="" class="media_pc">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/view_02_mobile.jpg" alt="" class="media_tablet">
+                </div>
+                <div class="view_info">
+                  <strong class="info_tit">아이파크가 만드는 <br>마곡 첫 R&amp;D형 지식산업센터</strong>
+                  <p class="info_desc">여의도 공원 약 2배인 약 504,000㎡의 <br class="media_tablet">서울 보타닉 파크와 <br class="media_pc">습지생태공원 인접으로 쾌적한 자연환경</p>
+                </div>
+              </li>
+              <li class="view_item vertical">
+                <div class="view_imgbox">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/view_03.jpg" alt="" class="media_pc">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/view_03_mobile.jpg" alt="" class="media_tablet">
+                </div>
+                <div class="view_info">
+                  <strong class="info_tit">연구개발의 대기업, 중소기업으로 <br>완성되는 마곡 R&amp;D 네트워크</strong>
+                  <p class="info_desc">마곡지구 내 LG, 롯데 등 R&amp;D 연구개발 중심의 <br>첨단기술 분야 국내외 우수 기업 입주 확정</p>
+                </div>
+              </li>
+              <li class="view_item horizon">
+                <div class="view_imgbox">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/view_04.jpg" alt="" class="media_pc">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/view_04_mobile.jpg" alt="" class="media_tablet">
+                </div>
+                <div class="view_info">
+                  <strong class="info_tit">MICE시티, CJ개발계획 등을 <br>바로 누리는 높은 미래가치</strong>
+                  <p class="info_desc">서울 서부권의 중심이 되는 <br class="media_pc">약 3,668,796㎡의 마곡지구개발 및 인근 MICE 수혜</p>
+                </div>
+              </li>
+              <li class="view_item horizon">
+                <div class="view_imgbox">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/view_05.jpg" alt="" class="media_pc">
+                  <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/view_05_mobile.jpg" alt="" class="media_tablet">
+                </div>
+                <div class="view_info">
+                  <strong class="info_tit">입주사의 초기 부담을 낮춘 <br>분양가와 재산세, 취득세 경감 등 세제혜택</strong>
+                  <p class="info_desc">마곡 아이파크 디어반 입주사에<br>제공되는 다양한 혜택</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section section_contact">
+        <div class="section_inner">
+          <h2 class="section_tit">MAGOK IPARK THE URBAN<br>contact</h2>
+
+          <div class="contact type_main">
+            <div class="contact_box media_pc">
+              <div class="contact_info">
+                <ul class="contact_list">
+
+                  <li class="contact_item">
+                    <strong class="item_tit">현장주소</strong>
+                    <span class="item_address"><span class="blind">주소</span>서울시 강서구 마곡동 783일원</span>
+                  </li>
+                </ul>
+                <div class="contact_number">
+                  <strong class="item_tit">대표문의</strong>
+                  <span class="number_info"><span class="blind">전화번호</span>1666-5984</span>
+                </div>
+              </div>
+              <div class="contact_imgbox">
+                <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/map_01.jpg" alt="" class="img_map">
+                <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/map_pin_01.png" alt="" class="map_pin_start">
+              </div>
+            </div>
+            <div class="contact_box media_tablet">
+              <div class="tab type_contact">
+                <div class="tab_area">
+                  <ul class="tab_list" role="tablist">
+
+                    <li class="tab_item is-active" role="none">
+                      <button type="button" class="tab_btn" role="tab" aria-selected="true">
+                        <span class="tab_tit">현장주소</span>
+                        <span class="tab_sub"><span class="blind">주소</span>서울시 강서구 마곡동 783일원</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="contact_number">
+                    <strong class="item_tit">대표문의</strong>
+                    <span class="number_info"><span class="blind">전화번호</span>1666-5984</span>
+                  </div>
+                </div>
+              </div>
+              <ul class="contact_list">
+
+                <li class="contact_item is-show" role="tabpanel">
+                  <div class="contact_imgbox">
+                    <img src="https://cdn.i-park.com/ipark/magoktheurban/img/main/map_02_mobile.jpg" alt="">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- // Contents -->
+
+    
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <button type="button" class="btn_move_top">BACK TO TOP</button>
+  <div class="footer_inner">
+    <ul class="footer_menu_list">
+      <li class="footer_menu_item">
+        <a href="https://www.i-park.com/util/clause" target="_blank" title="서비스이용약관 새창으로 열림" class="footer_menu_link media_pc">서비스이용약관</a>
+        <a href="https://m.i-park.com/util/clause" target="_blank" title="서비스이용약관 새창으로 열림" class="footer_menu_link media_tablet">서비스이용약관</a>
+      </li>
+      <li class="footer_menu_item">
+        <a href="https://www.i-park.com/util/privacy_infographic" target="_blank" title="개인정보처리방침 새창으로 열림" class="footer_menu_link media_pc">개인정보처리방침</a>
+        <a href="https://m.i-park.com/util/privacy_infographic" target="_blank" title="개인정보처리방침 새창으로 열림" class="footer_menu_link media_tablet">개인정보처리방침</a>
+      </li>
+    </ul>
+    <div class="footer_desc_box">
+      <p class="footer_desc">홍보관 개관중<br>*본 홈페이지에 사용된 사진 및 이미지 등은 소비자의 이해를 돕기 위한 것으로 실제 시공에 따라 변경될 수 있습니다.</p>
+      <p class="footer_desc">04377 서울특별시 용산구 한강대로 23길 55<br>© HDC HYUNDAI DEVELOPMENT COMPANY.<br class="media_tablet"> ALL RIGHT RESERVED.</p>
+    </div>
+    <a href="https://www.hdc-dvp.com/index.do" target="_blank" title="현대산업개발 새창으로 열림" class="footer_logo">
+      <span class="blind">HDC 현대산업개발</span>
+    </a>
+  </div>
+</footer>
+<!-- // Footer -->
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11390434164"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'AW-11390434164');
+
+</script>
+
+<!-- kakao -->
+<script type="text/javascript" charset="UTF-8" src="https://www.i-park.com//t1.daumcdn.net/kas/static/kp.js"></script>
+<script type="text/javascript">
+      kakaoPixel('6146034411276448837').pageView();
+</script>
+<!-- // kakao -->
+
+<!-- naver -->
+<script type="text/javascript" src="https://www.i-park.com//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "304fbc79888264";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+<!-- // naver -->
+  </div>
+  
+  
+
+
+
+
+<!-- Javascript -->
+<script src="https://www.i-park.com/resources/house/oceancity/js/libs/swiper.min.js"></script>
+<script src="https://www.i-park.com/resources/house/oceancity/js/libs/vendor.min.js"></script>
+<script src="https://www.i-park.com/resources/house/oceancity/js/apps/common.js"></script>
+<script src="https://www.i-park.com/resources/house/oceancity/js/apps/main.js"></script>
+<script src="https://www.i-park.com/resources/house/oceancity/js/apps/sub.js"></script>
+<!-- // Javascript -->
+
+
+    <!-- Event Popup -->
+    <div class="event-popup" id="eventPopup">
+        <div class="popup-content">
+            <button class="close-popup" id="closeEventBtn"><i class="fa-solid fa-xmark"></i></button>
+            <div class="popup-header">
+                <h2>특별 이벤트</h2>
+            </div>
+            <div class="popup-body">
+                <h3>ti, rt 선착순 지원 이벤트!</h3>
+                <p>마곡 아이파크 디어반에서 한정 수량으로<br>선착순 지원 이벤트를 진행합니다.<br>지금 바로 문의하세요!</p>
+                <a href="tel:1666-5984" class="popup-btn">📞 1666-5984로 문의하기</a>
+            </div>
+            <div class="popup-footer">
+                <label><input type="checkbox" id="noShowToday"> 오늘 하루 보지 않기</label>
+            </div>
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const eventPopup = document.getElementById('eventPopup');
+            const closeEventBtn = document.getElementById('closeEventBtn');
+            const noShowToday = document.getElementById('noShowToday');
+
+            function setCookie(name, value, days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+            }
+
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+
+            if (!getCookie('hideEventPopup')) {
+                setTimeout(() => {
+                    eventPopup.classList.add('active');
+                }, 1000);
+            }
+
+            closeEventBtn.addEventListener('click', () => {
+                if (noShowToday.checked) {
+                    setCookie('hideEventPopup', 'true', 1);
+                }
+                eventPopup.classList.remove('active');
+            });
+        });
+    </script>
+    
+
+    <!-- Telegram Form Modal -->
+    <div class="tg-modal" id="tgModal">
+        <div class="tg-content">
+            <div class="tg-header">
+                <h2>관심고객 등록</h2>
+                <button class="tg-close" onclick="closeTelegramModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="tg-body">
+                <div class="tg-form-group">
+                    <label for="tgName">성명 (Name)</label>
+                    <input type="text" id="tgName" placeholder="홍길동" required>
+                </div>
+                <div class="tg-form-group">
+                    <label for="tgPhone">연락처 (Phone)</label>
+                    <input type="tel" id="tgPhone" placeholder="010-1234-5678" required>
+                </div>
+                
+                <div class="tg-consent">
+                    <strong>[개인정보 수집 및 이용 동의]</strong><br><br>
+                    1. 수집항목: 성명, 연락처<br>
+                    2. 수집 및 이용목적: 마곡 아이파크 디어반 분양 안내 및 분양 관련 정보 제공<br>
+                    3. 보유 및 이용기간: 분양 완료시까지 (또는 고객 동의 철회시 파기)
+                </div>
+                
+                <label class="tg-checkbox-wrap">
+                    <input type="checkbox" id="tgAgree"> 개인정보 수집 및 이용에 동의합니다. (필수)
+                </label>
+                
+                <button class="tg-submit" id="tgSubmitBtn" onclick="submitTelegramForm()">등록 완료하기</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        // --- Telegram Integration Logic ---
+        // TODO: 아래 YOUR_TELEGRAM_BOT_TOKEN_HERE 와 YOUR_TELEGRAM_CHAT_ID_HERE 를 실제 값으로 변경하세요.
+        const TELEGRAM_BOT_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN_HERE';
+        const TELEGRAM_CHAT_ID = 'YOUR_TELEGRAM_CHAT_ID_HERE';
+        
+        function openTelegramModal(e) {
+            e.preventDefault();
+            document.getElementById('tgModal').classList.add('active');
+        }
+        
+        function closeTelegramModal() {
+            document.getElementById('tgModal').classList.remove('active');
+        }
+        
+        function submitTelegramForm() {
+            const name = document.getElementById('tgName').value.trim();
+            const phone = document.getElementById('tgPhone').value.trim();
+            const agree = document.getElementById('tgAgree').checked;
+            
+            if (!name) {
+                alert('성명을 입력해주세요.');
+                return;
+            }
+            if (!phone) {
+                alert('연락처를 입력해주세요.');
+                return;
+            }
+            if (!agree) {
+                alert('개인정보 수집 및 이용에 동의하셔야 등록이 가능합니다.');
+                return;
+            }
+            
+            const submitBtn = document.getElementById('tgSubmitBtn');
+            submitBtn.disabled = true;
+            submitBtn.innerText = '전송 중...';
+            
+            const message = `🔔 [마곡 아이파크 디어반] 관심고객 등록\n\n👤 성명: ${name}\n📞 연락처: ${phone}\n✅ 개인정보동의: 완료`;
+            
+            const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+            const data = {
+                chat_id: TELEGRAM_CHAT_ID,
+                text: message
+            };
+            
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert('성공적으로 접수되었습니다. 곧 연락드리겠습니다!');
+                    closeTelegramModal();
+                    // Reset form
+                    document.getElementById('tgName').value = '';
+                    document.getElementById('tgPhone').value = '';
+                    document.getElementById('tgAgree').checked = false;
+                } else {
+                    alert('전송에 실패했습니다. 관리자에게 문의하거나 토큰 설정을 확인해주세요.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('네트워크 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = '등록 완료하기';
+            });
+        }
+    </script>
+    
+</body></html>
